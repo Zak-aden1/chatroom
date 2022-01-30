@@ -5,13 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
-  <title>Ninja Chat</title>
+  <title>Chat Room</title>
 </head>
 <body>
 
   <!-- container & title -->
   <div class="container my-4">
-    <h1 class="my-4 text-center">Ninja Chat</h1>
+    <h1 class="my-4 text-center">Chat Room</h1>
     <!-- buttons for chatrooms -->
     <div class="chat-rooms mb-3 text-center">
       <div class="my-2">Choose a chatroom:</div>
@@ -51,6 +51,29 @@
     </form>
   </div>
   
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+  <script>
+    // Import the functions you need from the SDKs you need
+    // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyA_EHRTaTcFAdaa1KnK1JVxWvGFeZQtbEA",
+      authDomain: "chatroom-c6db3.firebaseapp.com",
+      projectId: "chatroom-c6db3",
+      storageBucket: "chatroom-c6db3.appspot.com",
+      messagingSenderId: "557808239062",
+      appId: "1:557808239062:web:11529b3998d6362df6e477"
+    };
+  
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    console.log(db.collection('chats'));
+  </script>
   <script src="scripts/chat.js"></script>
   <script src="scripts/ui.js"></script>
   <script src="scripts/app.js"></script>
